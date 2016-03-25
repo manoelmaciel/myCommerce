@@ -1,3 +1,7 @@
+04:31 25/03/2016
+
+	Cliente, teste inicial ... Funcionando!
+
 15:31 10/03/2016
 
 	Vamos deixar isso pra mais tarde ...
