@@ -1,16 +1,17 @@
 package model.dao;
 
 import java.util.List;
+
 import model.domain.Cliente;
 
 public interface IClienteDao {
+
+	List<Cliente> getClientes(Cliente cliente);
 	
-	Cliente findByCodigo(Integer codigo);
-	
-	List<Cliente> Listar();
-	
-	void remover(Cliente cliente);
-	
-	Cliente salvarOuAtualizar(Cliente cliente);
+	public void excluir(Cliente cliente);
+
+	Cliente salvar(Cliente cliente);
+
+	void atualizar(Cliente cliente);
 
 }

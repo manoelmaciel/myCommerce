@@ -15,9 +15,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name="CLIENTE")
 public class Cliente implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -30,16 +27,20 @@ public class Cliente implements Serializable {
 	
 	@Column( name = "EMAIL")
 	private String email;
+	
+	@Column( name = "SENHA")
+	private String senha;	
 
 	public Cliente() {
 		
 	}
 
-	public Cliente(Integer codigo, String name, String email) {
+	public Cliente(Integer codigo, String name, String email, String senha) {
 		super();
 		this.codigo = codigo;
 		this.name = name;
 		this.email = email;
+		this.senha = senha;
 	}
 
 	public Integer getCodigo() {
@@ -66,6 +67,14 @@ public class Cliente implements Serializable {
 		this.email = email;
 	}
 
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -89,14 +98,6 @@ public class Cliente implements Serializable {
 		} else if (!codigo.equals(other.codigo))
 			return false;
 		return true;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 
 }
